@@ -1,6 +1,6 @@
 package Pizzaria.Salao;
 //1 - Atributos
-public class Atendimento {
+public class Atendimento {//classe
     public String atendimento;//visibilidade public
     public double freezers;//visibilidade public
     public double garçons;//visibilidade public

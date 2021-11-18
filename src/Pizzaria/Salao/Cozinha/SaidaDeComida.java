@@ -1,6 +1,6 @@
 package Pizzaria.Salao.Cozinha;
 
-public class SaidaDeComida {
+public class SaidaDeComida {//classe
 
     public static final String s1 = null;// visibilidade public
     private String calabresa;// visibilidade private
