@@ -2,12 +2,13 @@ package Pizzaria.Salao.Cozinha;
 
 public class SaidaDeComida {
 
-    private String calabresa;
-    public String montarAPizza = calabresa;
-    protected char pronto;
-    public boolean pedido;
-    public boolean cozinha;// visibilidade public
-
+    public static final String s1 = null;// visibilidade public
+    private String calabresa;// visibilidade private
+    public String montarAPizza = calabresa;// visibilidade public
+    protected char pronto;// visibilidade public
+    public boolean pedido;// visibilidade public
+    public boolean cozinhaAberta;// visibilidade public
+    
     // metodo de acesso
 
     public boolean getpedido() {
@@ -35,29 +36,45 @@ public class SaidaDeComida {
     }
 
     public boolean getcozinha() {
-        return cozinha;
+        return cozinhaAberta;
     }
 
-    public void stecozinha(boolean cz) {
-        this.cozinha = cz;
+    public void setcozinha(boolean cz) {
+        this.cozinhaAberta = cz;
     }
 
     public void status() {
-        System.out.println("A cozinha pode receber pedidos? " + this.cozinha);
+        System.out.println("A cozinha pode receber pedidos? " + this.cozinhaAberta);
         System.out.println("Qual é o pedido? " + this.calabresa);
         System.out.println("O pedido está sendo preparado. " + this.pedido);
         System.out.println("Pedido pronto. " + this.pronto);
     }
 
-    public SaidaDeComida(){
-        this.aberto();
+    public SaidaDeComida(boolean cz,boolean p, String calabresa, char pr){//Metodo construtor
+        this.cozinhaAberta= cz;
+        this.pedido = p;
+        this.montarAPizza = calabresa;
+        this.pronto = pr;
+        
+        this.cozinhaAberta();
         
     }
 
-    private void aberto() {
+    public SaidaDeComida() {
     }
 
-    public void stecozinha(String string) {
+    private void cozinhaAberta() {
+    }
+
+    public void cozinha () {
+        this.cozinhaAberta = true;
+    }
+
+    public void cozinhaFechada(String cz) {
+        this.cozinhaAberta = false;
+    }
+
+    public void setcozinha(String string) {
     }
 
 }
